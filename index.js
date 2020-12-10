@@ -1,19 +1,3 @@
-/* eslint-disable indent */
-// const Discord = require('discord.js');
-// const bot = new Discord.Client();
-// bot.on('ready', ()=>{
-//       console.log('Bot is online!');
-
-// })
-
-// bot.on('message', msg=>{
-//       if(msg.content==='hi'){
-//             msg.channel.send({files:["./b.jpg"]});
-//       }
-// })
-
-// bot.login(token);
-
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
@@ -22,7 +6,7 @@ require('dotenv').config();
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
-const {prefix,bot_age,words_arr,bot_info} = require('./config.json');
+const {prefix} = require('./config.json');
 const token = process.env.TOKEN;
 
 client.once('ready', () => {

@@ -17,10 +17,12 @@ module.exports = {
 			getJSON(finalurl,function(err,res){
 				// if(err) return msg.channel.send('Errr...');
 				// return msg.channel.send(res);
-				if(err) console.log('errrr');
+				if(err){
+					return msg.channel.send('Handle not found! :(');
+				}
 				else{
-					console.log(res);
-					var name = res.result[0].firstName+res.result[0].lastName;
+					// console.log(res);
+					var name = res.result[0].firstName+' '+res.result[0].lastName;
 					var highestRating = res.result[0].maxRating;
 					var currentRating = res.result[0].rating;
 					var maxrank = res.result[0].maxRank;
@@ -55,10 +57,11 @@ module.exports = {
 						{name:"Max Rank", value : maxrank},
 					)
 					.setThumbnail(pic_url);
+					console.log('Request made for : ',name);
 					return msg.channel.send(embed);
 					
 				}
-			})
+			});
 		}
 	},
 };

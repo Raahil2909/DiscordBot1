@@ -1,8 +1,6 @@
 /* eslint-disable indent */
 // const Discord = require('discord.js');
 // const bot = new Discord.Client();
-// const token ='Nzg2MTU4MDkxOTIxMjYwNTc0.X9CUxw.-RCMKXQC9WJL-kXIfxLl1w4IUBc';
-
 // bot.on('ready', ()=>{
 //       console.log('Bot is online!');
 

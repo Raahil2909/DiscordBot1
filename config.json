@@ -1,0 +1,9 @@
+{
+	"prefix"	: ";",
+	"bot_age"	: 1,
+	"words_arr"	: ["Hi","Bye","This is array"],
+	"bot_info"	:{
+		"name"	:	"ping pong bot",
+		"version":	1.0
+	}
+}
